@@ -1,8 +1,8 @@
-# Clínica PetCare – ASP.NET Core MVC
+# Clínica Veterinaria – ASP.NET Core MVC
 
 ## Descripción del Proyecto
 
-**PetCare** es una aplicación web desarrollada en **ASP.NET Core MVC** que permite **registrar y visualizar información de mascotas** atendidas en una clínica veterinaria.  
+**Clínica Veterinaria** es una aplicación web desarrollada en **ASP.NET Core MVC** que permite **registrar y visualizar información de mascotas** atendidas en una clínica veterinaria.  
 El sistema fue diseñado aplicando los principios del patrón **MVC**, la **validación de datos** mediante anotaciones, y la **separación de responsabilidades** entre capas.
 
 ---
@@ -13,9 +13,9 @@ Desarrollar una aplicación web en ASP.NET Core MVC que permita registrar y visu
 
 ---
 
-## Historia del Cliente – “Clínica PetCare”
+## Historia del Cliente – “Clínica Veterinaria”
 
-La clínica veterinaria **PetCare** requiere una herramienta sencilla para registrar las mascotas que atienden.  
+La clínica veterinaria requiere una herramienta sencilla para registrar las mascotas que atienden.  
 El sistema permite ingresar los siguientes datos:
 
 - Nombre de la mascota  
