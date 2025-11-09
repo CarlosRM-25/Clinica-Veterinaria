@@ -1,0 +1,15 @@
+git init
+git checkout -b main
+git add .
+git commit -m "Inicial: proyecto ASP.NET Core MVC PetCare"
+git checkout -b feature/mascota-model
+# agregar Models/Mascota.cs y NotFutureDateAttribute
+git add Models/
+git commit -m "Agregar modelo Mascota y validación NotFutureDate"
+git checkout main
+git merge feature/mascota-model
+git checkout -b feature/mvc-mascota
+# agregar repo, controller, vistas
+git add Controllers Data Views
+git commit -m "Agregar MascotaRepository, MascotaController y vistas Index/Registrar"
+git push origin main
