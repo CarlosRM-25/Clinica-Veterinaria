@@ -1,0 +1,62 @@
+﻿@model Clínica_Veterinaria.Models.Mascota
+@using Clínica_Veterinaria.Models
+@{
+    ViewData["Title"] = "Registrar Mascota";
+}
+
+<h1>Registrar Mascota</h1>
+
+<form asp-action="Guardar" method="post" class="row g-3">
+    <div class="col-md-6">
+        <label asp-for="Nombre" class="form-label"></label>
+        <input asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+
+    <div class="col-md-6">
+        <label asp-for="Especie" class="form-label"></label>
+        <select asp-for="Especie" class="form-select" asp-items="Html.GetEnumSelectList<Especie>()"></select>
+        <span asp-validation-for="Especie" class="text-danger"></span>
+    </div>
+
+    <div class="col-md-6">
+        <label asp-for="Raza" class="form-label"></label>
+        <input asp-for="Raza" class="form-control" />
+        <span asp-validation-for="Raza" class="text-danger"></span>
+    </div>
+
+    <div class="col-md-6">
+        <label asp-for="Edad" class="form-label"></label>
+        <input asp-for="Edad" class="form-control" type="number" min="0" max="25" />
+        <span asp-validation-for="Edad" class="text-danger"></span>
+    </div>
+
+    <div class="col-md-6">
+        <label asp-for="Nombre_Dueño" class="form-label"></label>
+        <input asp-for="Nombre_Dueño" class="form-control" />
+        <span asp-validation-for="Nombre_Dueño" class="text-danger"></span>
+    </div>
+
+    <div class="col-md-6">
+        <label asp-for="Telefono_Dueño" class="form-label"></label>
+        <input asp-for="Telefono_Dueño" class="form-control" placeholder="809-555-1234" />
+        <span asp-validation-for="Telefono_Dueño" class="text-danger"></span>
+    </div>
+
+    <div class="col-md-6">
+        <label asp-for="Fecha_Ingreso" class="form-label"></label>
+        <input asp-for="Fecha_Ingreso" class="form-control" type="date" />
+        <span asp-validation-for="Fecha_Ingreso" class="text-danger"></span>
+    </div>
+
+    <div class="col-12">
+        <button type="submit" class="btn btn-success">Guardar</button>
+        <a class="btn btn-secondary" href="@Url.Action("Index", "Mascota")">Cancelar</a>
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
